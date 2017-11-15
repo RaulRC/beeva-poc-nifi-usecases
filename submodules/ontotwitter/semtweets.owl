@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/rrc/ontologies/2017/7/untitled-ontology-2#"
+     xml:base="http://www.semanticweb.org/rrc/ontologies/2017/7/untitled-ontology-2"
+     xmlns:semtweet="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:untitled-ontology-2="http://www.semanticweb.org/rrc/ontologies/2017/7/untitled-ontology-2#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasCoordinates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasCoordinates">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Tweet"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Coordinates"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasHashtag -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasHashtag">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Tweet"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Hashtag"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasUser -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasUser">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Tweet"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasCreationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasCreationDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Tweet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasFavouriteCount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasFavouriteCount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Tweet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasFollowersCount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasFollowersCount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasHashtagValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasHashtagValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Hashtag"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Tweet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasLang -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasLang">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Tweet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasLatitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasLatitude">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Coordinates"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasLongitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasLongitude">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Coordinates"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasRetweetCount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasRetweetCount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Tweet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasText">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Tweet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasTextSource -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasTextSource">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Tweet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#normalizedString"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasTimeStampMs -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasTimeStampMs">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Tweet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasTimeZone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasTimeZone">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasUserCreationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasUserCreationDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasUserFavouriteCount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasUserFavouriteCount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasUserId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasUserId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasUserLang -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasUserLang">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#isTruncated -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#isTruncated">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Tweet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#isVerified -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#isVerified">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Coordinates -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Coordinates"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Entity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Hashtag -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Hashtag">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Tweet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Tweet"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#User -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#User"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Coord1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Coord1">
+        <semtweet:hasLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.05701649</semtweet:hasLatitude>
+        <semtweet:hasLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-75.14310264</semtweet:hasLongitude>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Hash1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Hash1">
+        <semtweet:hasHashtagValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#TestHashtag</semtweet:hasHashtagValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Tweet1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Tweet1">
+        <semtweet:hasCoordinates rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Coord1"/>
+        <semtweet:hasUser rdf:resource="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#User1"/>
+        <semtweet:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">819797</semtweet:hasId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#User1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#User1">
+        <semtweet:hasUserId rdf:datatype="http://www.w3.org/2001/XMLSchema#long">819797</semtweet:hasUserId>
+        <semtweet:isVerified rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</semtweet:isVerified>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Coordinates"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Hashtag"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#Tweet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#User"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
