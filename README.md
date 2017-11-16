@@ -5,7 +5,13 @@ A general overview about NiFi as a Big Data tool
 
 ## 0. Install NiFi via Docker and load topologies
 
+```{r, engine='bash', count_lines}
+#Docker Build
+docker build -t rreguillo/nifi:<tag> .
 
+#Docker Run
+docker run -d -p 9090-9091:8080-8081 rreguillo/nifi:<tag>
+```
 
 ## 1. Tweet feeding with NiFi
 
