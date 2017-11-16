@@ -19,6 +19,9 @@ docker build -t rreguillo/nifi:<tag> .
 docker run -d -p 9090-9091:8080-8081 rreguillo/nifi:<tag>
 ```
 
+Access to: http://localhost:9090/nifi/
+
+
 ### Load data
 
 ## 1. Tweet feeding with NiFi
