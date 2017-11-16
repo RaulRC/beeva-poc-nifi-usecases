@@ -3,6 +3,10 @@
 # beeva-poc-nifi-usecases
 A general overview about NiFi as a Big Data tool 
 
+## 0. Install NiFi via Docker and load topologies
+
+
+
 ## 1. Tweet feeding with NiFi
 
 The purpose of this step is collect Tweets via Twitter API and store in some distributed file system such as HDFS or Amazon S3.
