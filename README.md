@@ -26,6 +26,7 @@ docker run -d -p 9090-9091:8080-8081 rreguillo/nifi:<tag>
 The purpose of this step is collect Tweets via Twitter API and store in some distributed file system such as HDFS or Amazon S3.
 
 * Configure Twitter processor
+* Compress tweets 
 * Store data in local directory
 
 ## 2. Tweet transformation with NiFi
@@ -42,12 +43,24 @@ In this step is going to be shown how NiFi is capable of interact with microserv
 
 NiFi is ready to interact with services such as ElasticSearch or REST APIs. In this step, collected tweets are going to be sent into an ElasticSearch in order to visualize the results.
 
+* Sending information to ElasticSearch
 
 
-## 4. Sentiment Analysis with Watson and NiFi
+## 4. Use case: Sentiment Analysis with Watson and NiFi
 
-Sentiment Analysis with IBM Watson end 2 end: from Tweet collect to parameter visualizations. 
+Sentiment Analysis with IBM Watson end 2 end: from Tweet collect to parameter visualizations.
 
-## 5. Other use casese with NiFi and Big Data Tools
+* Tweet feeding
+* Extracting values
+* Sending to watson
+* Receiving response and formatting
+* Sending to ElasticSearch
+* Transform response
+* Storing response
 
-NiFi is capable of interact with other Big Data tools and frameworks, such as HBase, Kafka, HDFS, Cassandra,... In this point this features are going to be shown. 
+## 5. Other use cases with NiFi and Big Data Tools
+
+NiFi is capable of interact with other Big Data tools and frameworks, such as HBase, Kafka, HDFS, Cassandra,... In this point this features are going to be shown.
+
+* Brief explanation of different features
+* Integration with other Big Data Tools
