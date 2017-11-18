@@ -2,7 +2,7 @@
 <template encoding-version="1.1">
   <description></description>
   <groupId>10c5584f-015e-1000-23b1-7959f0342114</groupId>
-  <name>BEEVA_POC_V3</name>
+  <name>BEEVA_POC_V4</name>
   <snippet>
     <connections>
       <id>8e9a6460-211d-3bf8-0000-000000000000</id>
@@ -2885,11 +2885,52 @@
       <id>fcf09108-47d5-3121-0000-000000000000</id>
       <parentGroupId>0df99d5d-b05f-33ae-0000-000000000000</parentGroupId>
       <position>
-        <x>1475.8610527831743</x>
+        <x>1477.2128594237993</x>
         <y>640.90761834405</y>
       </position>
       <comments></comments>
       <contents>
+        <connections>
+          <id>30c8c51d-fb31-3e2c-0000-000000000000</id>
+          <parentGroupId>fcf09108-47d5-3121-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>fcf09108-47d5-3121-0000-000000000000</groupId>
+            <id>33cf071d-91d0-35ec-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>fcf09108-47d5-3121-0000-000000000000</groupId>
+            <id>45141aeb-0e72-3a59-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>38a2b630-8649-300e-0000-000000000000</id>
+          <parentGroupId>fcf09108-47d5-3121-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>fcf09108-47d5-3121-0000-000000000000</groupId>
+            <id>45141aeb-0e72-3a59-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <source>
+            <groupId>fcf09108-47d5-3121-0000-000000000000</groupId>
+            <id>c57fc994-f9bd-312a-0000-000000000000</id>
+            <type>INPUT_PORT</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
         <connections>
           <id>48b864e9-8c88-3073-0000-000000000000</id>
           <parentGroupId>fcf09108-47d5-3121-0000-000000000000</parentGroupId>
@@ -2914,14 +2955,13 @@
           <id>c57fc994-f9bd-312a-0000-000000000000</id>
           <parentGroupId>fcf09108-47d5-3121-0000-000000000000</parentGroupId>
           <position>
-            <x>798.9998838785068</x>
-            <y>-165.99999323759175</y>
+            <x>802.9998838785068</x>
+            <y>-182.99999323759175</y>
           </position>
           <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
           <name>rawTweets</name>
           <state>STOPPED</state>
           <type>INPUT_PORT</type>
-          <validationErrors>'Port 'rawTweets'' is invalid because Output connection for port 'rawTweets' is not defined.</validationErrors>
         </inputPorts>
         <inputPorts>
           <id>760bb88c-e885-3e44-0000-000000000000</id>
@@ -3337,6 +3377,70 @@
           </relationships>
           <style></style>
           <type>org.apache.nifi.processors.aws.kinesis.stream.PutKinesisStream</type>
+        </processors>
+        <processors>
+          <id>33cf071d-91d0-35ec-0000-000000000000</id>
+          <parentGroupId>fcf09108-47d5-3121-0000-000000000000</parentGroupId>
+          <position>
+            <x>751.9998838785068</x>
+            <y>308.00000676240825</y>
+          </position>
+          <bundle>
+            <artifact>nifi-update-attribute-nar</artifact>
+            <group>org.apache.nifi</group>
+            <version>1.3.0</version>
+          </bundle>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Delete Attributes Expression</key>
+                <value>
+                  <name>Delete Attributes Expression</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Store State</key>
+                <value>
+                  <name>Store State</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Stateful Variables Initial Value</key>
+                <value>
+                  <name>Stateful Variables Initial Value</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Delete Attributes Expression</key>
+              </entry>
+              <entry>
+                <key>Store State</key>
+                <value>Do not store state</value>
+              </entry>
+              <entry>
+                <key>Stateful Variables Initial Value</key>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>UpdateAttribute</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
         </processors>
         <processors>
           <id>3f36f4f9-ff92-355b-0000-000000000000</id>
@@ -3895,6 +3999,7 @@
             <properties>
               <entry>
                 <key>Amazon Lambda Name</key>
+                <value>getLength</value>
               </entry>
               <entry>
                 <key>Amazon Lambda Qualifier (version)</key>
@@ -3902,7 +4007,7 @@
               </entry>
               <entry>
                 <key>Region</key>
-                <value>us-west-2</value>
+                <value>eu-west-1</value>
               </entry>
               <entry>
                 <key>Access Key</key>
@@ -3928,7 +4033,7 @@
           </config>
           <name>PutLambda</name>
           <relationships>
-            <autoTerminate>false</autoTerminate>
+            <autoTerminate>true</autoTerminate>
             <name>failure</name>
           </relationships>
           <relationships>
@@ -5628,5 +5733,5 @@
       <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
     </processors>
   </snippet>
-  <timestamp>11/18/2017 18:52:51 UTC</timestamp>
+  <timestamp>11/18/2017 19:12:22 UTC</timestamp>
 </template>
