@@ -72,3 +72,8 @@ NiFi is capable of interact with other Big Data tools and frameworks, such as HB
 
 * Brief explanation of different features
 * Integration with other Big Data Tools
+* AWS: S3 [List/PUT/FETCH]
+* AWS: Lambda
+* AWS: Kinesis
+* Format json/avro
+
