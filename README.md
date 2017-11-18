@@ -31,6 +31,11 @@ The purpose of this step is collect Tweets via Twitter API and store in some dis
 * Configure Twitter processor
 * Compress tweets 
 * Store data in local directory
+* Check stored tweets
+
+```{r, engine='bash', count_lines}
+docker exec -i -t <container_name> /bin/bash
+```
 
 ## 2. Tweet transformation with NiFi
 
