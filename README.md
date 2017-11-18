@@ -44,6 +44,21 @@ In this step is going to be shown how NiFi is capable of interact with microserv
 * Extract json values
 * Routing based on attributes
 * Install and run microservice
+
+### Install & Run 
+
+```{r, engine='bash', count_lines}
+#Docker Build
+docker build -t rreguillo/ms.semtweet:<tag> .
+
+#Docker Run
+docker run rreguillo/ms.semtweet:<tag>
+
+#Check IP with docker inspect and configure NiFi processor (Stage 2 - PostHTTP - URL)  with that
+```
+
+
+
 * Send tweets to microservice
 * Listen response
 
