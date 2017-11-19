@@ -2,7 +2,7 @@
 <template encoding-version="1.1">
   <description></description>
   <groupId>cee25853-015f-1000-e54e-96238e55e89e</groupId>
-  <name>BEEVA_POC_V7</name>
+  <name>BEEVA_POC_V8</name>
   <snippet>
     <connections>
       <id>8f1ab553-4c33-3d81-0000-000000000000</id>
@@ -278,8 +278,8 @@
       <id>c57fc994-f9bd-312a-0000-000000000000</id>
       <parentGroupId>fcf09108-47d5-3121-0000-000000000000</parentGroupId>
       <position>
-        <x>846.4293788470059</x>
-        <y>68.55532069114798</y>
+        <x>847.6760219134121</x>
+        <y>61.07570643333548</y>
       </position>
       <comments></comments>
       <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
@@ -322,8 +322,8 @@
       <id>cb196771-10a1-3078-0000-000000000000</id>
       <parentGroupId>fcf09108-47d5-3121-0000-000000000000</parentGroupId>
       <position>
-        <x>1223.599356440348</x>
-        <y>245.17262437587965</y>
+        <x>1214.989493159098</x>
+        <y>244.09636094814527</y>
       </position>
       <height>1199.8922119140625</height>
       <label>AWS: S3</label>
@@ -373,8 +373,8 @@
       <id>88ed01e4-41f8-3d90-0000-000000000000</id>
       <parentGroupId>fcf09108-47d5-3121-0000-000000000000</parentGroupId>
       <position>
-        <x>151.42937884700592</x>
-        <y>1251.055320691148</y>
+        <x>157.42937884700592</x>
+        <y>1249.055320691148</y>
       </position>
       <bundle>
         <artifact>nifi-standard-nar</artifact>
@@ -489,8 +489,8 @@
       <id>a927b970-6cb2-3844-0000-000000000000</id>
       <parentGroupId>fcf09108-47d5-3121-0000-000000000000</parentGroupId>
       <position>
-        <x>1894.1023636805303</x>
-        <y>786.6036396732723</y>
+        <x>1912.3985062586553</x>
+        <y>670.369691919366</y>
       </position>
       <bundle>
         <artifact>nifi-standard-nar</artifact>
@@ -622,8 +622,8 @@
       <id>c597c3b5-77cf-3642-0000-000000000000</id>
       <parentGroupId>fcf09108-47d5-3121-0000-000000000000</parentGroupId>
       <position>
-        <x>1336.4292567766934</x>
-        <y>554.0553206911479</y>
+        <x>1340.7341884173184</x>
+        <y>421.6777572145855</y>
       </position>
       <bundle>
         <artifact>nifi-aws-nar</artifact>
@@ -800,7 +800,7 @@
       <id>d724fdcd-5c0f-3bd1-0000-000000000000</id>
       <parentGroupId>fcf09108-47d5-3121-0000-000000000000</parentGroupId>
       <position>
-        <x>150.42937884700592</x>
+        <x>158.17834124934967</x>
         <y>771.0553206911479</y>
       </position>
       <bundle>
@@ -999,8 +999,8 @@
       <id>dcd5665d-48a3-3dcf-0000-000000000000</id>
       <parentGroupId>fcf09108-47d5-3121-0000-000000000000</parentGroupId>
       <position>
-        <x>1334.1443558680303</x>
-        <y>785.1768416872417</y>
+        <x>1912.0853959070928</x>
+        <y>425.71263880638236</y>
       </position>
       <bundle>
         <artifact>nifi-standard-nar</artifact>
@@ -1167,7 +1167,7 @@
           </entry>
           <entry>
             <key>Region</key>
-            <value>us-west-2</value>
+            <value>eu-west-1</value>
           </entry>
           <entry>
             <key>Access Key</key>
@@ -1380,8 +1380,8 @@
       <id>ebe1b584-6ffa-3db5-0000-000000000000</id>
       <parentGroupId>fcf09108-47d5-3121-0000-000000000000</parentGroupId>
       <position>
-        <x>1897.7300380266934</x>
-        <y>1258.967185925523</y>
+        <x>1328.3991054095059</x>
+        <y>896.2743224611675</y>
       </position>
       <bundle>
         <artifact>nifi-update-attribute-nar</artifact>
@@ -1444,8 +1444,8 @@
       <id>03a05426-3b4d-3857-0000-000000000000</id>
       <parentGroupId>fcf09108-47d5-3121-0000-000000000000</parentGroupId>
       <position>
-        <x>1896.2432328211553</x>
-        <y>1012.7526264896785</y>
+        <x>1332.2932816492803</x>
+        <y>650.0597325077449</y>
       </position>
       <bundle>
         <artifact>nifi-aws-nar</artifact>
@@ -2255,5 +2255,5 @@
       <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
     </processors>
   </snippet>
-  <timestamp>11/19/2017 10:17:35 UTC</timestamp>
+  <timestamp>11/19/2017 10:22:15 UTC</timestamp>
 </template>
