@@ -3,9 +3,9 @@ MAINTAINER Raul Reguillo raul.reguillo@gmail.com
 RUN yum update -y && \
 yum install -y which wget git java-1.8.0-openjdk && yum clean all
 ENV JAVA_HOME /usr/lib/jvm/jre-1.8.0-openjdk
-ENV SEMTWEET_HTTP_INTERFACE 0.0.0.0
+ENV SEMTWEET_HTTP_INTERFACE semtweet
 ENV SEMTWEET_HTTP_PORT 9003
-ENV SEMTWEET_OUTPUT_HTTP_INTERFACE 172.17.0.2
+ENV SEMTWEET_OUTPUT_HTTP_INTERFACE nifi
 ENV SEMTWEET_OUTPUT_HTTP_PORT 9091
 ENV SEMTWEET_OUTPUT_HTTP_SERVICE datavault/v1/listener
 
