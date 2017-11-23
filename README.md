@@ -19,8 +19,24 @@ docker build -t rreguillo/nifi:<tag> .
 docker run -d -p 9090-9091:8080-8081 rreguillo/nifi:<tag>
 ```
 
-Access to: http://localhost:9090/nifi/
 
+
+
+### Setup
+
+```{r, engine='bash', count_lines}
+
+cd submodules/
+
+docker-compose up
+
+curl -XPUT -H "Content-Type: application/json" http://elasticsearch:9200/_all/_settings -d '{"index.blocks.read_only_allow_delete": null}'
+```
+
+* Nifi:  http://localhost:9090/nifi/
+* Kibana: http://localhost:5601
+
+#### Load layout into NiFi
 
 ### Load data
 
