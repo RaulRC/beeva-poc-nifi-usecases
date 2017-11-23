@@ -1,0 +1,58 @@
+version: '2'
+
+services:
+
+  nifi:
+    build:
+      context: dockernifi/
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+    ports:
+      - "9090:8080"
+      - "9091:8081"      
+    networks:
+      - beevapocnifi
+
+  semtweet:
+    build:
+      context: ms.semtweet/
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+    networks:
+      - beevapocnifi
+    depends_on:
+      - nifi
+      
+  elasticsearch:
+    build:
+      context: elasticsearch/
+      args:
+        ELK_VERSION: $ELK_VERSION
+    volumes:
+      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+    networks:
+      - beevapocnifi
+
+  kibana:
+    build:
+      context: kibana/
+      args:
+        ELK_VERSION: $ELK_VERSION
+    volumes:
+      - ./kibana/config/:/usr/share/kibana/config
+    ports:
+      - "5601:5601"
+    networks:
+      - beevapocnifi
+    depends_on:
+      - elasticsearch
+
+networks:
+
+  beevapocnifi:
+    driver: bridge
