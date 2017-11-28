@@ -61,8 +61,6 @@ You can check your templates in the corner top-right:
 ![topo2](https://github.com/RaulRC/beeva-poc-nifi-usecases/blob/master/img/9.png)
 
 
-### Load data
-
 ## 1. Tweet feeding with NiFi <a name="tweetfeeding"></a>
 
 The purpose of this step is collect Tweets via Twitter API and store in some distributed file system such as HDFS or Amazon S3.
