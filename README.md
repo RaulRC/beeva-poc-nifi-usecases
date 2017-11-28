@@ -17,9 +17,6 @@ A general overview about NiFi as a Big Data tool
 
 [5. Other use cases with NiFi and Big Data Tools](#bdtools)
 
-[6. Conclusions](#conclusions)
-
-
 ## 0. Setup environment <a name="step0"></a>
 
 * NiFi installation
@@ -30,12 +27,16 @@ A general overview about NiFi as a Big Data tool
 
 ### Install & Run 
 
+Install and runn all needed dockers via docker-compose
+
 ```{r, engine='bash', count_lines}
-cd submodules
+cd submodules/
 docker-compose up
 ```
 
 ### Interaction
+
+Open your browser and check: 
 
 * Nifi:  http://localhost:9090/nifi/
 * Kibana: http://localhost:5601
@@ -89,12 +90,10 @@ Sentiment Analysis with IBM Watson end 2 end: from Tweet collect to parameter vi
 
 * Generate IBM Watson Tone Analyzer credentials
 * Tweet feeding
-* Extracting values
+* Extracting values from each tweet
 * Sending to watson
 * Receiving response and formatting
 * Sending to ElasticSearch
-* Transform response
-* Storing response
 
 [ SCREENSHOT HERE ]
 
@@ -102,20 +101,14 @@ Sentiment Analysis with IBM Watson end 2 end: from Tweet collect to parameter vi
 
 NiFi is capable of interact with other Big Data tools and frameworks, such as HBase, Kafka, HDFS, Cassandra,... In this point this features are going to be shown.
 
-* Amazon Credentials
-* Brief explanation of different features
-* Integration with other Big Data Tools
-* AWS: S3 [List/PUT/FETCH]
-* AWS: Lambda
-* AWS: Kinesis
-* Format json/avro
+* Amazon credentials: in order to show how NiFi is able to connect to other Big Data and Cloud Computing tools, it will be neccessary set up some AWS Credentials
+* Integration with other Big Data Tools:
+  * AWS: S3 [List/PUT/FETCH]
+  * AWS: Lambda
+  * AWS: Kinesis
+  * Format json/avro: NiFi is capable of transform between different formats such as csv, json and avro. Here we will find some examples of transformations. 
 
 [ SCREENSHOTS HERE ]
-
-
-## 6. Conclusions <a name="conclusions"></a>
-
-
 
 
 Author: Raúl Reguillo Carmona
