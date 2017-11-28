@@ -54,7 +54,9 @@ Load topology from nifi-layouts folder:
 
 ![topo1](https://github.com/RaulRC/beeva-poc-nifi-usecases/blob/master/img/8.png)
 
-Then, drag and drop from templates option, in the corner top-right: 
+Then, drag and drop from templates option, in the toolbar icon. 
+
+You can check your templates in the corner top-right: 
 
 ![topo2](https://github.com/RaulRC/beeva-poc-nifi-usecases/blob/master/img/9.png)
 
