@@ -1,5 +1,8 @@
 # BEEVA PoC: NiFi as a General Purpose Big Data Tool
 
+![logo](https://github.com/RaulRC/beeva-poc-nifi-usecases/blob/master/img/nifi-logo-horizontal.png)
+
+
 # Beeva-poc-nifi-usecases
 A general overview about NiFi as a Big Data tool 
 
