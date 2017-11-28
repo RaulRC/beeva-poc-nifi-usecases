@@ -3,40 +3,31 @@
 # beeva-poc-nifi-usecases
 A general overview about NiFi as a Big Data tool 
 
-## 0. Install NiFi via Docker and load topologies
+## 0. Install NiFi, MS-semtweets and ELK stack via Docker Compose
 
-* NiFi Installation
-* Loading topology
+* NiFi installation
+* ELK Stack instalation
+* Semantic tweet microservice installation
+* Loading NiFi topology
 
 
 ### Install & Run 
 
 ```{r, engine='bash', count_lines}
-#Docker Build
-docker build -t rreguillo/nifi:<tag> .
-
-#Docker Run
-docker run -d -p 9090-9091:8080-8081 rreguillo/nifi:<tag>
-```
-
-
-
-
-### Setup
-
-```{r, engine='bash', count_lines}
-
-cd submodules/
-
+cd submodules
 docker-compose up
-
-curl -XPUT -H "Content-Type: application/json" http://elasticsearch:9200/_all/_settings -d '{"index.blocks.read_only_allow_delete": null}'
 ```
+
+### Run & Interaction
 
 * Nifi:  http://localhost:9090/nifi/
 * Kibana: http://localhost:5601
 
 #### Load layout into NiFi
+
+* nifi-layouts/
+
+[ SCREENSHOT HERE ]
 
 ### Load data
 
@@ -44,10 +35,15 @@ curl -XPUT -H "Content-Type: application/json" http://elasticsearch:9200/_all/_s
 
 The purpose of this step is collect Tweets via Twitter API and store in some distributed file system such as HDFS or Amazon S3.
 
+* Generate Twitter API Keys 
 * Configure Twitter processor
 * Compress tweets 
 * Store data in local directory
 * Check stored tweets
+
+
+[ SCREENSHOT HERE ]
+
 
 ```{r, engine='bash', count_lines}
 docker exec -i -t <container_name> /bin/bash
@@ -57,38 +53,24 @@ docker exec -i -t <container_name> /bin/bash
 
 In this step is going to be shown how NiFi is capable of interact with microservices sending and receiving data. The example will ilustrate how transform a tweet into semantic triples.
 
-* Extract json values
-* Routing based on attributes
-* Install and run microservice
-
-### Install & Run 
-
-```{r, engine='bash', count_lines}
-#Docker Build
-docker build -t rreguillo/ms.semtweet:<tag> .
-
-#Docker Run
-docker run rreguillo/ms.semtweet:<tag>
-
-#Check IP with docker inspect and configure NiFi processor (Stage 2 - PostHTTP - URL)  with that
-```
-
-
-
 * Send tweets to microservice
 * Listen response
+
+[ SCREENSHOT HERE ]
 
 ## 3. Tweet visualization with NiFi
 
 NiFi is ready to interact with services such as ElasticSearch or REST APIs. In this step, collected tweets are going to be sent into an ElasticSearch in order to visualize the results.
 
 * Sending information to ElasticSearch
+* Check via Kibana
 
 
 ## 4. Use case: Sentiment Analysis with Watson and NiFi
 
 Sentiment Analysis with IBM Watson end 2 end: from Tweet collect to parameter visualizations.
 
+* Generate IBM Watson Tone Analyzer credentials
 * Tweet feeding
 * Extracting values
 * Sending to watson
@@ -97,14 +79,20 @@ Sentiment Analysis with IBM Watson end 2 end: from Tweet collect to parameter vi
 * Transform response
 * Storing response
 
+[ SCREENSHOT HERE ]
+
 ## 5. Other use cases with NiFi and Big Data Tools
 
 NiFi is capable of interact with other Big Data tools and frameworks, such as HBase, Kafka, HDFS, Cassandra,... In this point this features are going to be shown.
 
+* Amazon Credentials
 * Brief explanation of different features
 * Integration with other Big Data Tools
 * AWS: S3 [List/PUT/FETCH]
 * AWS: Lambda
 * AWS: Kinesis
 * Format json/avro
+
+[ SCREENSHOTS HERE ]
+
 
