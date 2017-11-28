@@ -45,7 +45,16 @@ Open your browser and check:
 
 * nifi-layouts/
 
-[ SCREENSHOT HERE ]
+![General](https://github.com/RaulRC/beeva-poc-nifi-usecases/blob/master/img/7.png)
+
+Load topology from nifi-layouts folder:
+
+![topo1](https://github.com/RaulRC/beeva-poc-nifi-usecases/blob/master/img/8.png)
+
+Then, drag and drop from templates option, in the corner top-right: 
+
+![topo2](https://github.com/RaulRC/beeva-poc-nifi-usecases/blob/master/img/9.png)
+
 
 ### Load data
 
@@ -59,13 +68,27 @@ The purpose of this step is collect Tweets via Twitter API and store in some dis
 * Store data in local directory
 * Check stored tweets
 
+Configure processor with Twitter credentials
 
-[ SCREENSHOT HERE ]
+![1](https://github.com/RaulRC/beeva-poc-nifi-usecases/blob/master/img/1.png)
 
+And run the whole topology. The flowfiles should pass along the rest of processors. 
+
+![2](https://github.com/RaulRC/beeva-poc-nifi-usecases/blob/master/img/2.png)
+
+Processors: 
+
+1. Capture tweets
+2. Merge jsons into a single file (of determined size)
+3. Specify output route on local machine: compressed_tweets/json/<date>/<filename>
+4. Store files
+
+Check files: log into machine with command: 
 
 ```{r, engine='bash', count_lines}
 docker exec -i -t <container_name> /bin/bash
 ```
+<container_name> should be something like *submodule_nifi_1*
 
 ## 2. Tweet transformation with NiFi <a name="transform"></a>
 
