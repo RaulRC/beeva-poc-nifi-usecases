@@ -32,8 +32,13 @@ A general overview about NiFi as a Big Data tool
 
 Install and runn all needed dockers via docker-compose
 
+1. Build jar for microservice: ms.semtweet
+2. docker-compose up
+
 ```{r, engine='bash', count_lines}
-cd submodules/
+cd submodules/ms.semtweet/
+mvn clean package
+cd ..
 docker-compose up
 ```
 
