@@ -148,6 +148,6 @@ NiFi is capable of interact with other Big Data tools and frameworks, such as HB
 ![6](https://github.com/RaulRC/beeva-poc-nifi-usecases/blob/master/img/6.png)
 
 
-PPTS: [ppts](https://docs.google.com/a/beeva.com/presentation/d/1e8YFylUPs79468D63oHd8UJEjl33fgdRt-Uxghig4cg/edit?usp=sharing)
+Slides: [Link to Drive](https://docs.google.com/a/beeva.com/presentation/d/1e8YFylUPs79468D63oHd8UJEjl33fgdRt-Uxghig4cg/edit?usp=sharing)
 
 Author: Raúl Reguillo Carmona
