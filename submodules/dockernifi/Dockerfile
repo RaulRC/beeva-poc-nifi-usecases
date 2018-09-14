@@ -8,7 +8,7 @@ RUN yum update -y &&\
 ENV JAVA_HOME /usr/lib/jvm/jre-1.8.0-openjdk
 RUN export JAVA_HOME
 
-ENV NIFI_VERSION=1.3.0 \
+ENV NIFI_VERSION=1.7.1 \
         NIFI_HOME=/opt/nifi \
         MIRROR_SITE=http://apache.rediris.es
 
